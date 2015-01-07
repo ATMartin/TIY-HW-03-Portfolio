@@ -1,0 +1,184 @@
+/* MIXINS & HAMMERS */
+
+@font-face {
+  font-family: 'Mono Social Icons Font';
+  src: url('icons/MonoSocialIconsFont-1.10.eot');
+  src: url('icons/MonoSocialIconsFont-1.10.eot?#iefix') format('embedded-opentype'),
+  url('icons/MonoSocialIconsFont-1.10.woff') format('woff'),
+  url('icons/MonoSocialIconsFont-1.10.ttf') format('truetype'),
+  url('icons/MonoSocialIconsFont-1.10.svg#MonoSocialIconsFont') format('svg');
+  src: url('icons/MonoSocialIconsFont-1.10.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.symbol, a.symbol:before {
+  font-family: 'Mono Social Icons Font';
+  -webkit-text-rendering: optimizeLegibility;
+  -moz-text-rendering: optimizeLegibility;
+  -ms-text-rendering: optimizeLegibility;
+  -o-text-rendering: optimizeLegibility;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+.symbol {
+  font-size: 3em;
+  text-decoration: none;
+  color: white;
+  margin: 0 1%;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.ghostbox {
+  position: relative;
+  border: 3px solid gray;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.ghostbox .title {
+  position: absolute;
+  padding: 1%;
+  font-size: 200%;
+}
+.ghostbox .title .h2 { margin: 0; }
+.ghostbox .caption {
+  position: absolute;
+  bottom: -20%;
+  height: 20%;
+  background-color: rgba(80, 80, 80, 0.9);
+  border: 1px solid black;
+  transition: bottom 0.2s;
+  width: 100%;
+  text-align: center;
+  padding: 2%;
+}
+
+.ghostbox:hover .title {
+  font-size: 100%;
+}
+.ghostbox:hover .caption {
+  bottom: 0;
+}
+
+/* STRUCTURE */
+body {
+  color: white;
+  font-family: Helvetica;
+  background-color: #FFA352;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  margin: 0 auto;
+  width: 80%;
+  padding: 0 2%;
+}
+
+#header {
+  box-shadow: 3px 3px 4px #333;
+}
+
+#portfolio, #about, #footer {
+  box-shadow: inset 0 10px 10px -8px #333, 3px 3px 4px #333;
+}
+
+/* HEADER */
+#header {
+  background-color: #289AB2;
+  padding: 2% 0;
+  text-align: center;
+}
+
+#header img {
+  display: block;
+  margin: 0 auto;
+  width: 15%;
+  height: 15%;
+  border-radius: 40%;
+}
+
+#header h1, h3 { text-align: center; }
+
+#header h1 {
+  font-size: 4em;
+  font-family: 'Comic Sans MS';
+  margin: 0 auto;
+}
+
+#header h3 { margin: 0; }
+
+/* PORTFOLIO */
+#portfolio {
+  text-align: center;
+  overflow: auto;
+  background-color: #6BE5FF;
+  /* align: center; */
+  padding: 0 2%;
+  margin: 0;
+}
+
+#portfolio h2 {
+  text-align: center;
+  padding: 1%;
+  margin: 0;
+}
+
+#portfolio .crop {
+  display: inline-block;
+  background-color: #6BE5FF;
+  border: 2px solid gray;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  margin: 2%;
+}
+
+#portfolio .crop img {
+  display: block;
+  margin: 0 auto;
+}
+
+/* ABOUT ME */
+#about {
+  padding: 1%;
+  clear: both;
+  background-color: #52E1FF;
+}
+
+#about {
+  text-align: center;
+  list-style-position: inside;
+}
+#about ul {
+  margin: 0;
+}
+
+/* FOOTER */
+#footer {
+  padding: 1%;
+  background-color: #289AB2;
+  display: block;
+  clear: both;
+  text-align: center;
+}
+
+#footer p {
+  margin: 0;
+}
+
+/* TYPOGRAPHY */
