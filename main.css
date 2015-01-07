@@ -1,184 +1,60 @@
-/* MIXINS & HAMMERS */
-
-@font-face {
-  font-family: 'Mono Social Icons Font';
-  src: url('icons/MonoSocialIconsFont-1.10.eot');
-  src: url('icons/MonoSocialIconsFont-1.10.eot?#iefix') format('embedded-opentype'),
-  url('icons/MonoSocialIconsFont-1.10.woff') format('woff'),
-  url('icons/MonoSocialIconsFont-1.10.ttf') format('truetype'),
-  url('icons/MonoSocialIconsFont-1.10.svg#MonoSocialIconsFont') format('svg');
-  src: url('icons/MonoSocialIconsFont-1.10.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-.symbol, a.symbol:before {
-  font-family: 'Mono Social Icons Font';
-  -webkit-text-rendering: optimizeLegibility;
-  -moz-text-rendering: optimizeLegibility;
-  -ms-text-rendering: optimizeLegibility;
-  -o-text-rendering: optimizeLegibility;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-font-smoothing: antialiased;
-  -ms-font-smoothing: antialiased;
-  -o-font-smoothing: antialiased;
-  font-smoothing: antialiased;
-}
-
-.symbol {
-  font-size: 3em;
-  text-decoration: none;
-  color: white;
-  margin: 0 1%;
-}
-
 * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-
-.ghostbox {
-  position: relative;
-  border: 3px solid gray;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.ghostbox .title {
-  position: absolute;
-  padding: 1%;
-  font-size: 200%;
-}
-.ghostbox .title .h2 { margin: 0; }
-.ghostbox .caption {
-  position: absolute;
-  bottom: -20%;
-  height: 20%;
-  background-color: rgba(80, 80, 80, 0.9);
-  border: 1px solid black;
-  transition: bottom 0.2s;
-  width: 100%;
-  text-align: center;
-  padding: 2%;
-}
-
-.ghostbox:hover .title {
-  font-size: 100%;
-}
-.ghostbox:hover .caption {
-  bottom: 0;
-}
-
-/* STRUCTURE */
+html,
 body {
-  color: white;
-  font-family: Helvetica;
-  background-color: #FFA352;
-}
-
-p {
+  height: 100%;
+  width: 100%;
   margin: 0;
-  padding: 0;
 }
-
+body {
+  background-image: url('https://unsplash.imgix.net/photo-1415889678233-eb900aeee9e1?dpr=2&fit=crop&fm=jpg&h=700&q=75&w=1050');
+  background-size: cover;
+  position: fixed;
+}
 #container {
+  background-color: white;
+  box-shadow: 1px 1px 3px black;
+  width: 45%;
+  height: 100%;
+  margin-left: 5%;
+  text-align: center;
+  padding: 5%;
+}
+#container .title {
+  font-size: 300%;
   margin: 0 auto;
+  margin-top: 40%;
   width: 80%;
-  padding: 0 2%;
+  font-family: 'Montserrat';
 }
-
-#header {
-  box-shadow: 3px 3px 4px #333;
+#container .subtitle {
+  font-size: 150%;
+  font-family: 'Montserrat';
 }
-
-#portfolio, #about, #footer {
-  box-shadow: inset 0 10px 10px -8px #333, 3px 3px 4px #333;
+#container .intro {
+  margin-top: 10%;
+  font-family: 'Open Sans';
+  text-align: left;
 }
-
-/* HEADER */
-#header {
-  background-color: #289AB2;
-  padding: 2% 0;
-  text-align: center;
-}
-
-#header img {
-  display: block;
+#container .intro-button {
+  width: 30%;
   margin: 0 auto;
-  width: 15%;
-  height: 15%;
-  border-radius: 40%;
+  margin-top: 10%;
+  transition: width 0.2s;
 }
-
-#header h1, h3 { text-align: center; }
-
-#header h1 {
-  font-size: 4em;
-  font-family: 'Comic Sans MS';
-  margin: 0 auto;
+#container .intro-button:hover {
+  width: 50%;
 }
-
-#header h3 { margin: 0; }
-
-/* PORTFOLIO */
-#portfolio {
-  text-align: center;
-  overflow: auto;
-  background-color: #6BE5FF;
-  /* align: center; */
-  padding: 0 2%;
-  margin: 0;
-}
-
-#portfolio h2 {
-  text-align: center;
+.btn {
+  background-color: black;
+  border-radius: 5% 0 5% 0;
+  color: white;
   padding: 1%;
-  margin: 0;
 }
-
-#portfolio .crop {
-  display: inline-block;
-  background-color: #6BE5FF;
-  border: 2px solid gray;
-  width: 300px;
-  height: 300px;
-  overflow: hidden;
-  margin: 2%;
+.btn a {
+  font-size: 200%;
+  text-decoration: none;
+  color: white;
+  font-family: 'Economica';
 }
-
-#portfolio .crop img {
-  display: block;
-  margin: 0 auto;
-}
-
-/* ABOUT ME */
-#about {
-  padding: 1%;
-  clear: both;
-  background-color: #52E1FF;
-}
-
-#about {
-  text-align: center;
-  list-style-position: inside;
-}
-#about ul {
-  margin: 0;
-}
-
-/* FOOTER */
-#footer {
-  padding: 1%;
-  background-color: #289AB2;
-  display: block;
-  clear: both;
-  text-align: center;
-}
-
-#footer p {
-  margin: 0;
-}
-
-/* TYPOGRAPHY */
