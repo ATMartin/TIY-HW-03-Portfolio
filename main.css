@@ -10,9 +10,10 @@ body {
 body {
   background-image: url('https://unsplash.imgix.net/photo-1415889678233-eb900aeee9e1?dpr=2&fit=crop&fm=jpg&h=700&q=75&w=1050');
   background-size: cover;
-  position: fixed;
+  position: relative;
 }
-#container {
+.layer {
+  position: absolute;
   background-color: white;
   box-shadow: 1px 1px 3px black;
   width: 45%;
@@ -21,30 +22,42 @@ body {
   text-align: center;
   padding: 5%;
 }
-#container .title {
+.layer .title {
   font-size: 300%;
   margin: 0 auto;
   margin-top: 40%;
   width: 80%;
   font-family: 'Montserrat';
 }
-#container .subtitle {
+.layer .subtitle {
   font-size: 150%;
   font-family: 'Montserrat';
 }
-#container .intro {
+.layer .text {
   margin-top: 10%;
   font-family: 'Open Sans';
   text-align: left;
 }
-#container .intro-button {
+.layer .intro-button {
   width: 30%;
   margin: 0 auto;
   margin-top: 10%;
   transition: width 0.2s;
 }
-#container .intro-button:hover {
+.layer .intro-button:hover {
   width: 50%;
+}
+.layer.intro {
+  z-index: 50;
+}
+.layer.about {
+  z-index: 40;
+}
+.layer.projects {
+  z-index: 30;
+}
+.layer.contacts {
+  z-index: 20;
 }
 .btn {
   background-color: black;
@@ -57,4 +70,33 @@ body {
   text-decoration: none;
   color: white;
   font-family: 'Economica';
+}
+/*-----ANIMATIONS--------*/
+
+.sendToBack {
+  -webkit-animation: sendToBack 2s forwards;
+}
+.bringToFront {
+  -webkit-animation: sendToBack 2s reverse;
+}
+.secondInStack {
+  z-index: 90 !important;
+}
+@-webkit-keyframes sendToBack {
+  0% {
+    margin-left: 5%;
+    z-index: 100;
+  }
+  48% {
+    margin-left: 50%;
+    z-index: 100;
+  }
+  52% {
+    margin-left: 50%;
+    z-index: 10;
+  }
+  100% {
+    margin-left: 5%;
+    z-index: 10;
+  }
 }
